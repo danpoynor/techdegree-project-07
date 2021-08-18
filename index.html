@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp Dashboard</title>
+    <meta name="description" content="Author: Dan Poynor, WebApp Dashboard coding exercise for Front End Web Developer Tech Degree at TeamTreehouse.com"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <svg style="display: none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="icon-arrow" viewBox="0 0 24 14">
+      <path d="M12.8,0.4l10.8,10.9c0.4,0.4,0.4,1.1,0,1.6l-0.7,0.7c-0.4,0.4-1.1,0.4-1.6,0L12,4.1l-9.3,9.5c-0.4,0.4-1.1,0.4-1.6,0l-0.7-0.7c-0.4-0.4-0.4-1.1,0-1.6L11.2,0.4C11.7,0,12.4,0,12.8,0.4L12.8,0.4z"/>
+      </symbol>
+    </svg>
+
+    <header id="top">
+      <p class="logo"><strong>Web</strong>App<sup>&trade;</sup></p>
+      <div class="notifications">
+        <button class="notifications-indicator state-active" title="Notification Status">
+          <svg xmlns="http://www.w3.org/2000/svg" id="bell" x="0" y="0" version="1.1" viewBox="0 0 48 48" xml:space="preserve">
+            <path class='highlight' fill='none' d="M45 37c0-2-2-3-4-3l-1-2V22c0-7-5-13-11-14V6c0-2-2-4-4-4s-4 2-4 4v2c-6 1-11 7-11 14v10l-2 2c-2 0-3 1-3 3v3h40v-3z"/>
+            <path class='highlight-bottom' fill='none' d="M9 33h32c2 0 4 2 4 4v3H5v-3c0-2 1-4 4-4z"/>
+            <path class='shape' fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2" d="M45 37c0-2-2-3-4-3l-1-2V22c0-7-5-13-11-14V6c0-2-2-4-4-4s-4 2-4 4v2c-6 1-11 7-11 14v10l-2 2c-2 0-3 1-3 3v3h40v-3z"/>
+            <path class='clapper' fill='#fff' d='M31 41c0 4-3 7-6 7s-7-3-7-7h13z'/>
+          </svg><span class="unread"></span>
+        </button>
+        <ul class="notifications-list">
+          <li class="state-success"><a href="#">You have 6 unread messages</a>
+            <button class="btn-close-notice" title="Close Notification" type="button">+</button>
+          </li>
+          <li class="state-success"><a href="#">You have 3 new followers</a>
+            <button class="btn-close-notice" title="Close Notification" type="button">+</button>
+          </li>
+          <li class="state-warning"><a href="#">Your password expires in 7 days</a>
+            <button class="btn-close-notice" title="Close Notification" type="button">+</button>
+          </li>
+        </ul>
+      </div>
+      <div class="avatar">
+        <picture>
+          <source srcset="images/member-1.avif" type="image/avif">
+          <source srcset="images/member-1.webp" type="image/webp"><img src="images/member-1.jpg" alt="" width="37" height="37">
+        </picture>
+        <p class="name">Student Name</p>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="./" title="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width='32' height='32'>
+            <g class="highlight" fill="none"><path d="M24 12L8 25v19h5V29h9v15h18V25L24 12zm11 25h-8v-8h8v8zM33 12V4h7v13z"/></g>
+            <g class="outline" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"><path d="M27 29h7v8h-7zM13 44V29h9v15"/>
+            <g><path d="M8 25v19h32V25M33 12V4h7v13"/><path d="M24 4l22 18-4 5-18-15L6 27l-4-5z"/></g>
+            </g>
+          </svg></a>
+        </li>
+        <li><a href="#traffic" title="Traffic">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width='32' height='32'>
+            <g class="highlight" fill="none">
+            <path d="M4 24h6v23H4zM15 17h6v30h-6zM27 26h6v21h-6zM38 14h6v33h-6z"/>
+            <circle cx="6.7" cy="14.4" r="2.9"/>
+            <circle cx="17.7" cy="7" r="2.9"/>
+            <circle cx="29.5" cy="15.9" r="2.9"/>
+            <circle cx="41.3" cy="4.1" r="2.9"/>
+            </g>
+            <g class="outline" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2">
+            <path d="M4 47V24h6v23M15 47V17h6v30M27 47V26h6v21M38 47V14h6v33M1 47h46"/>
+            <circle cx="6.7" cy="14.4" r="2.9"/>
+            <circle cx="17.7" cy="7" r="2.9"/>
+            <circle cx="29.5" cy="15.9" r="2.9"/>
+            <circle cx="41.3" cy="4.1" r="2.9"/>
+            <path d="M9 13l6-4M20 9l7 5M32 14l7-8"/>
+            </g>
+          </svg></a>
+        </li>
+        <li><a href="#members" title="Members">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width='32' height='32'>
+            <defs>
+            <path id="reuse-1" d="M19 26c-1-7-8-7-9-7s-8 0-8 8v11h13M33 38h14V27c0-8-8-8-9-8-2 0-8 0-9 7"/>
+            <path id="reuse-0" d="M33 33c0-8-8-8-9-8s-9 0-9 8v11h18V33z"/>
+            </defs>
+            <g class="highlight" fill="none">
+            <circle cx="10.2" cy="9.1" r="5.2"/>
+            <circle cx="37.8" cy="9.1" r="5.2"/>
+            <circle cx="24" cy="15" r="5.2"/>
+            <use xlink:href="#reuse-0"/>
+            <use xlink:href="#reuse-1"/>
+            </g>
+            <g class="outline" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2">
+            <circle cx="10.2" cy="9.1" r="5.2"/>
+            <circle cx="37.8" cy="9.1" r="5.2"/>
+            <circle cx="24" cy="15" r="5.2"/>
+            <use xlink:href="#reuse-0"/>
+            <use xlink:href="#reuse-1"/>
+            </g>
+          </svg></a>
+        </li>
+        <li><a href="#settings" title="Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width='32' height='32'>
+            <path class="highlight" fill="none" d="M41 24v-3l5-3-5-10-6 3c-1-1-3-3-5-3V2H18v6c-2 0-4 2-5 3L8 8 2 18l5 3a18 18 0 000 6l-5 3 6 10 5-3c1 1 3 3 5 3v6h12v-6c2 0 4-2 5-3l5 3 6-10-5-3v-3zm-17 9a9 9 0 010-18 9 9 0 010 18z"/>
+            <g class="outline" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2">
+            <path d="M41 24v-3l5-3-5-10-6 3c-1-1-3-3-5-3V2H18v6c-2 0-4 2-5 3L8 8 2 18l5 3v6l-5 3 6 10 5-3c1 1 3 3 5 3v6h12v-6c2 0 4-2 5-3l5 3 6-10-5-3v-3z"/>
+            <circle cx="24" cy="24" r="8.9"/>
+            </g>
+          </svg></a></li>
+      </ul>
+    </nav>
+
+    <main id="dashboard">
+
+      <h1><span>Dashboard</span></h1>
+
+      <section class="traffic" id="traffic">
+        <header>
+          <h2>Traffic</h2>
+          <ul id="traffic-nav">
+            <li><button class="pill selected" id="traffic-hourly"><span>Hourly</span></button></li>
+            <li><button class="pill" id="traffic-daily"><span>Daily</span></button></li>
+            <li><button class="pill" id="traffic-weekly"><span>Weekly</span></button></li>
+            <li><button class="pill" id="traffic-monthly"><span>Monthly</span></button></li>
+          </ul>
+        </header>
+        <div class="chart-container"><canvas id="traffic-chart"></canvas></div>
+      </section>
+
+      <section class="daily">
+        <header>
+          <h2>Daily Traffic</h2>
+        </header>
+        <div class="chart-container"><canvas id="daily-chart"></canvas></div>
+      </section>
+
+      <section class="mobile">
+        <header>
+          <h2>Mobile Users</h2>
+        </header>
+        <div class="chart-container"><canvas id="mobile-chart"></canvas></div>
+      </section>
+
+      <section class="social-stats">
+        <header>
+          <h2>Social Stats</h2>
+        </header>
+        <div class="card facebook">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/></svg>
+          </div>
+          <p><span class='name'>Facebook</span> <span class='count'>10,320</span></p>
+        </div>
+        <div class="card instagram">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 001.384 2.126A5.868 5.868 0 004.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 002.126-1.384 5.86 5.86 0 001.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 00-1.384-2.126A5.847 5.847 0 0019.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 01-.899 1.382 3.744 3.744 0 01-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 01-1.379-.899 3.644 3.644 0 01-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+          </div>
+          <p><span class='name'>Instagram</span> <span class='count'>16,445</span></p>
+        </div>
+        <div class="card twitter">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"/></svg>
+          </div>
+          <p><span class='name'>Twitter</span> <span class='count'>22,189</span></p>
+        </div>
+      </section>
+
+      <section class="members new-members" id="members">
+        <header>
+          <h2>New Members</h2>
+        </header>
+        <figure>
+          <picture>
+            <source srcset="images/member-1.avif" type="image/avif">
+            <source srcset="images/member-1.webp" type="image/webp"><img src="images/member-1.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Victoria Chambers<br><a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a></p>
+            <p>10/15/2020</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="images/member-2.avif" type="image/avif">
+            <source srcset="images/member-2.webp" type="image/webp"><img src="images/member-2.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Dale Byrd<br><a href="mailto:dale.byrd52@example.com">victoria.chambers80@example.com</a></p>
+            <p>10/15/2020</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="images/member-3.avif" type="image/avif">
+            <source srcset="images/member-3.webp" type="image/webp"><img src="images/member-3.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Dawn Wood<br><a href="mailto:dawn.wood16@example.com">victoria.chambers80@example.com</a></p>
+            <p>10/15/2020</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="images/member-4.webp" type="image/webp">
+            <source srcset="images/member-4.avif" type="image/avif"><img src="images/member-4.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Dan Oliver<br><a href="mailto:dan.oliver80@example.com">victoria.chambers80@example.com</a></p>
+            <p>10/15/2020</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="members recent-activity">
+        <header>
+          <h2>Recent Activity</h2>
+        </header>
+        <figure>
+          <picture>
+            <source srcset="images/member-1.avif" type="image/avif">
+            <source srcset="images/member-1.webp" type="image/webp"><img src="images/member-1.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Victoria Chambers commented on <strong>WebApp&rsquo;s SEO Tips</strong><br>4 hours ago</p><a class="arrow" href="#" title="View activity">
+              <svg width="30" height="30">
+                <use xlink:href="#icon-arrow"></use>
+              </svg></a>
+          </figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="images/member-2.avif" type="image/avif">
+            <source srcset="images/member-2.webp" type="image/webp"><img src="images/member-2.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Dale Byrd like the post <strong>Facebook's Changes for 2021</strong><br>5 hours ago</p><a class="arrow" href="#" title="View activity">
+              <svg width="30" height="30">
+                <use xlink:href="#icon-arrow"></use>
+              </svg></a>
+          </figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="images/member-3.avif" type="image/avif">
+            <source srcset="images/member-3.webp" type="image/webp"><img src="images/member-3.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Dawn Wood commented on <strong>Facebook's Changes for 2021</strong><br>5 hours ago</p><a class="arrow" href="#" title="View activity">
+              <svg width="30" height="30">
+                <use xlink:href="#icon-arrow"></use>
+              </svg></a>
+          </figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="images/member-4.webp" type="image/webp">
+            <source srcset="images/member-4.avif" type="image/avif"><img src="images/member-4.jpg" alt="" width="60" height="60">
+          </picture>
+          <figcaption>
+            <p>Dan Oliver posted <strong>WebApp&rsquo;s SEO Tips</strong><br>1 day ago</p><a class="arrow" href="#" title="View activity">
+              <svg width="30" height="30">
+                <use xlink:href="#icon-arrow"></use>
+              </svg></a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="message">
+        <header>
+          <h2>Message User</h2>
+        </header>
+        <form class="widget-container" id="message-form">
+          <input class="form-field" id="user-field" type="search" placeholder="Search for User" data-tooltip="Usernames can only contain letters and spaces." list="name-list" maxlength="32" required>
+          <datalist id="name-list">
+            <option>Victoria Chambers</option>
+            <option>Dale Byrd</option>
+            <option>Dawn Wood</option>
+            <option>Dan Oliver</option>
+          </datalist>
+          <textarea class="form-area" id="message-field" name="messageField" cols="30" rows="5" placeholder="Message for User" data-tooltip="Messages can only contain letters, numbers, whitespace, dashes, and underscores." maxlength="256" required></textarea>
+          <button class="button-primary" id="send-button">Send</button>
+        </form>
+      </section>
+
+      <section class="settings" id="settings">
+        <header>
+          <h2>Settings</h2>
+        </header>
+        <form class="widget-container" id="settings-form">
+          <label class="switch" data-state="checked">Send Email Notifications<span class="value-labels" aria-hidden="true"><span class="on">ON</span><span class="off">OFF</span></span>
+            <input id="notifications-input" type="checkbox" role="switch" checked>
+          </label>
+          <label class="switch" data-state="checked">Set Profile to Public<span class="value-labels" aria-hidden="true"><span class="on"><span>ON</span></span><span class="off"><span>OFF</span></span></span>
+            <input id="public-input" type="checkbox" role="switch" checked>
+          </label>
+          <div class="select-wrapper">
+            <select id="timezone-select" name="timezone" required>
+              <option value disabled selected>Select Timezone</option>
+              <option value="us-eastern">US/Eastern</option>
+              <option value="us-central">US/Central</option>
+              <option value="us-mountain">US/Mountain</option>
+              <option value="us-pacific">US/Pacific</option>
+            </select>
+          </div>
+          <footer>
+            <button class="button-primary" id="submit-button">Save</button>
+            <button id="reset-button" type="button">Cancel</button>
+          </footer>
+        </form>
+      </section>
+
+    </main>
+
+    <a id="back-to-top" href="#top" title="Back to top">
+      <svg width="30" height="30">
+        <use xlink:href="#icon-arrow"></use>
+      </svg>
+    </a>
+
+    <script src="vendors/chart.min.js"></script>
+    <script src="js/WebApp.js"></script>
+    <script src="js/Alerts.js"></script>
+    <script src="js/BackToTop.js"></script>
+    <script src="js/Charts.js"></script>
+    <script src="js/MessageForm.js"></script>
+    <script src="js/Notifications.js"></script>
+    <script src="js/SettingsForm.js"></script>
+    <script src="js/Switches.js"></script>
+
+  </body>
+</html>
