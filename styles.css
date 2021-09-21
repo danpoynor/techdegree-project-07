@@ -13,10 +13,10 @@
   --color-gray-dark: #999;
   --color-gray-medium: #666;
   --color-gray-light: #f5f5f5;
-  --color-status-error: var(--color-primary-darker);
+  --color-status-error: #f53d3d;
   --color-status-success: #90ee90;
-  --color-status-warning: var(--color-primary-darker);
-  --color-alert-success-bg: var(--color-primary-darker);
+  --color-status-warning: #ffa500;
+  --color-alert-success-bg: #5ba05c;
   --color-header-separator: #989bb4;
   --color-navigation-item-hover-background: #d5d7eb55;
   --color-pill-hover: #333;
@@ -618,7 +618,7 @@ body > nav a:hover svg .outline, body > nav a:focus svg .outline {
 
 .alert {
   animation: fadeIn var(--standard-duration, 0s) ease forwards;
-  background-color: var(--color-primary, red);
+  background-color: var(--color-primary-darker, red);
   border-radius: var(--border-radius, 0);
   color: var(--color-background, red);
   font-size: 14px;
