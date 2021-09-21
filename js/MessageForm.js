@@ -65,6 +65,11 @@ WebApp.MessageForm = () => {
     const usernameTooltip = userField.nextElementSibling;
     const messageTooltip = messageField.nextElementSibling;
 
+    // if input fields are empty show a browser alert
+    if (username === '' || message === '') {
+      alert("Please fill in the required fields.");
+    }
+
     // If tooltips are still showing, make them visually stronger
     if (usernameTooltip.classList.contains('tooltip')) {
       usernameTooltip.style.backgroundColor = '#f53d3d';
