@@ -13,10 +13,10 @@
   --color-gray-dark: #999;
   --color-gray-medium: #666;
   --color-gray-light: #f5f5f5;
-  --color-status-error: #f53d3d;
-  --color-status-success: #90ee90;
-  --color-status-warning: #ffa500;
-  --color-alert-success-bg: #5ba05c;
+  --color-status-error: --color-primary-darker;
+  --color-status-success: --color-primary-darker;
+  --color-status-warning: --color-primary-darker;
+  --color-alert-success-bg: --color-primary-darker;
   --color-header-separator: #989bb4;
   --color-navigation-item-hover-background: #d5d7eb55;
   --color-pill-hover: #333;
